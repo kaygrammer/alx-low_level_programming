@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -12,11 +13,25 @@
 
 void puts_half(char *str)
 {
-int length = strlen(str);
-int i;
-for (i = length / 2; i < length; i++)
+int j = 0;
+int k;
+while (str[j] != '\0')
 {
-printf("%c", str[i]);
+j++;
 }
-printf("\n");
+if (j % 2 == 1)
+{
+k = (j - 1) / 2;
+k += 1;
+}
+else
+{
+k = j / 2;
+}
+
+for (; k < j; k++)
+{
+_putchar(str[k]);
+}
+_putchar('\n');
 }
