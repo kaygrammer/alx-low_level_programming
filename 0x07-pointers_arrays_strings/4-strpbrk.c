@@ -7,7 +7,7 @@
  * string for any of a set of bytes.
  * resources - geeksforgeeks.org, coldvault youtube channel,
  * portfolio course youtube channel.
- * Description: 'the program that works similar to strspn function
+ * Description: 'the program that works similar to strpbrk function
  * @s: string to be searched
  * @accept: string to be searched
  * Return: Always ret (Success)
