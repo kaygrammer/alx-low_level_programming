@@ -2,7 +2,7 @@
 
 /* betty style doc for function _memset goes there */
 /**
- * _memcpy - memset function(memset() is used to copy data
+ * _memcpy - memset function(memcpy() is used to copy data
  * from one block of memory to another.)
  * resources - geeksforgeeks.org, coldvault youtube cahannel.
  * Description: 'the program that works similar to memcpy function
