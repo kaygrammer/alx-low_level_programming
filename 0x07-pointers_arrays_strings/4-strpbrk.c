@@ -1,10 +1,10 @@
 #include "main.h"
-#include "string.h"
+#include <string.h>
 
-/* betty style doc for function strspn goes there */
+/* betty style doc for function _strpbrk goes there */
 /**
- * _strspn - strspn function(strchr() is used to gets the
- * length of a prefix substring.
+ * _strpbrk - _strpbrk function(strchr() searches a
+ * string for any of a set of bytes.
  * resources - geeksforgeeks.org, coldvault youtube channel,
  * portfolio course youtube channel.
  * Description: 'the program that works similar to strspn function
@@ -13,10 +13,15 @@
  * Return: Always ret (Success)
  */
 
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-size_t ret = 0;
-while (*s && strchr(accept, *s++))
-ret++;
-return (ret);
+while (*s)
+{
+if (strchr(accept, *s))
+{
+return ((char *)s);
+}
+s++;
+}
+return (NULL);
 }
