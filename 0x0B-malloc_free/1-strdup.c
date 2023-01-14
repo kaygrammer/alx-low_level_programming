@@ -5,20 +5,32 @@
 
 /**
  * _strdup - strcpy
- * Return: 1 for uppercase and 0 for lowercase
+ * Return: duplicated string
  * @str: positive integer
 */
 
 char *_strdup(char *str)
 {
-size_t length = strlen(str) + 1;
-char *copy = malloc(length * sizeof(char));
-if (str == NULL || strlen(str) == 0)
+int a = 0, i = 1;
+char *s;
+if (str == NULL)
+return (NULL);
+while (str[i])
 {
-return (NULL);
+i++;
 }
-if (copy == NULL)
+s = malloc((sizeof(char) * i) +1);
+if (s == NULL)
 return (NULL);
-memcpy(copy, str, length);
-return (copy);
+while (a < i)
+{
+s[a] = str[a];
+a++;
+}
+
+s[a] = '\0';
+return (s);
+
+
+
 }
