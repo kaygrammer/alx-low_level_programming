@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
-
+#include <stdio.h>
 
 /**
  * _strdup - strcpy
@@ -11,10 +11,14 @@
 
 char *_strdup(char *str)
 {
-int length = strlen(str) + 1;
+size_t length = strlen(str) + 1;
 char *copy = malloc(length * sizeof(char));
+if (str == NULL)
+{
+return (NULL);
+}
 if (copy == NULL)
 return (NULL);
-strcpy(copy, str);
+memcpy(copy, str, length);
 return (copy);
 }
