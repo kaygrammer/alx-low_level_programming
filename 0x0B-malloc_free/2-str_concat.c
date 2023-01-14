@@ -11,22 +11,32 @@
 
 char *str_concat(char *s1, char *s2)
 {
-size_t len1 = strlen(s1);
-size_t len2 = strlen(s2);
-char *result = malloc(len1 + len2 + 1);  /** +1 for the null terminator */
+int i = 0, j = 0, k = 0, l = 0;
+char *s;
 if (s1 == NULL)
-{
 s1 = "";
-}
 if (s2 == NULL)
-{
 s2 = "";
-}
-if (result == NULL)
-{
+while (s1[i])
+i++;
+while (s2[j])
+j++;
+l = i + j;
+s = malloc((sizeof(char) * l) +1);
+if (s == NULL)
 return (NULL);
+j = 0;
+while (k < l)
+{
+if (k <= i)
+s[k] = s1[k];
+if (k >= i)
+{
+s[k] = s2[j];
+j++;
 }
-memcpy(result, s1, len1);
-memcpy(result + len1, s2, len2 + 1);  /* +1 to include the null terminator */
-return (result);
+k++;
+}
+s[k] = '\0';
+return (s);
 }
