@@ -5,7 +5,7 @@
 /**
  * word_len - Locate the index marking the end of the
  * first wordcontained within the string
- * Return: the index marking the end of the initial word pointed to by 
+ * Return: the index marking the end of the initial word pointed to by
  * the str
  * NULL if ac == 0 or av == NULL
  * @str: string to be search
