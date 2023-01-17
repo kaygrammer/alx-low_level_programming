@@ -1,7 +1,5 @@
 #include "dog.h"
-#include "dog.h"
-#include <string.h>
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * init_dog - check the code
@@ -11,7 +9,7 @@
  * @age: age
  * @owner: owner
  *
- * Return: struct.
+ * Return: nothing.
  */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
